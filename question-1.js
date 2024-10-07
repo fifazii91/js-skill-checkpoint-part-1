@@ -6,3 +6,17 @@ const myTodo = [
   { id: 4, todo: "Wash dishes" },
 ];
 // เริ่มเขียนโค้ดตรงนี้
+myTodo.push({ id: 5, todo: "Walk the dog" });
+
+for (let i of myTodo) {
+  if (i.id === 4) {
+    i.todo = "Go to the gym";
+  }
+}
+
+myTodo.pop();
+
+console.log(myTodo);
+
+let todoShow = myTodo[myTodo.length - 1];
+console.log("To-do id: " + todoShow.id + ", " + todoShow.todo);
